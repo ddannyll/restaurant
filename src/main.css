@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --main-text: rgb(27, 27, 27);
+}
+
+body {
+    font-family: 'quicksand';
+    color: var(--main-text);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+#content {
+}
