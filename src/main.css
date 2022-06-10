@@ -1,17 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
 :root {
-    --main-text: rgb(27, 27, 27);
+    --main-text: rgb(54, 54, 54);
+    --primary-color: #FDF6EC;
 }
 
 body {
-    font-family: 'quicksand';
+    font-family: 'ubuntu';
     color: var(--main-text);
 }
 
-h2 {
-    font-size: 2rem;
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
 }
 
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+main {
+    margin: 120px 70px;
+    max-width: 800px;
+}
+
+
+
+
 #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

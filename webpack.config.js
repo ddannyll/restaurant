@@ -12,7 +12,11 @@ module.exports = {
             {
                 test:/\.css$/i,
                 use: ["style-loader", "css-loader"]
-            }
+            },
+            {
+                test:/\.(png|jpg|svg|gif)$/i,
+                loader: 'file-loader'
+            },
         ]
     },
     mode:'development',
