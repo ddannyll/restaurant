@@ -1,7 +1,5 @@
-import './header.css'
 
 const displayHeader = (container) => {
-    const header = document.createElement('header')
 
     // Logo
     const logo = document.createElement('a')
@@ -9,16 +7,18 @@ const displayHeader = (container) => {
     const logoText = document.createElement('h2')
     logoText.innerText = 'Tetris Flavours'
     logo.appendChild(logoText)
-    header.appendChild(logo)
+    container.appendChild(logo)
 
     const ul = document.createElement('ul')
 
     const btns = []
     const buttonClassic = document.createElement('button')
+    buttonClassic.id = 'classic-btn'
     buttonClassic.innerText = 'Classic'
     btns.push(buttonClassic)
     
     const buttonModern = document.createElement('button')
+    buttonModern.id = 'modern-btn'
     buttonModern.innerText = 'Modern'
     btns.push(buttonModern)
 
@@ -28,12 +28,7 @@ const displayHeader = (container) => {
         ul.appendChild(li)
     }
 
-    header.appendChild(ul)
-
-
-
-
-    container.appendChild(header)
+    container.appendChild(ul)
 }
 
 export default displayHeader

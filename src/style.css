@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+    --main-text: rgb(54, 54, 54);
+    --primary-color: #FDF6EC;
+}
+
+body {
+    font-family: 'ubuntu';
+    color: var(--main-text);
+}
+
+p {
+    line-height: 1.7;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    padding: 40px 0;
+    background-color: var(--primary-color);
+    box-shadow: 0 6px 10px -10px gray;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+
+header ul, header li {
+    display: flex;
+    text-transform: uppercase;
+}
+
+header ul {
+    justify-content: center;
+    gap: 100px;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+header li {
+    position: relative
+}
+
+header li>*:first-child:after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 1px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.1s ease-out;
+}
+
+header li>*:first-child:hover:after {
+    transform: scaleX(1);
+}
+
+
+main {
+    margin: 120px 70px;
+    max-width: 800px;
+
+    display: grid;
+
+    row-gap: 60px;
+    column-gap: 60px;
+
+}
+
+main.main-left {
+    grid-template-columns: 3fr 2fr;
+}
+
+main.main-right {
+    grid-template-columns: 2fr 3fr;
+}
+
+main h1 {
+    grid-column: 1/4;
+}
+
+
+main img{
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+}
+
+main img.four {
+    background-color: var(--primary-color);
+    padding-left: 15px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    main img {
+        width: 70%;
+    }
+}
